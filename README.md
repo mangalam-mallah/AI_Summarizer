@@ -1,8 +1,18 @@
  HEAD
 # AI_Summarizer
-Simple text summarizer
-# React + Vite
+This project is built using React and allows users to summarize text into a simpler, easy-to-understand format. It leverages the Google Gemini API with the Gemini-1.5-Flash model to generate accurate and concise summaries based on the given input.
 
+#Features
+AI Summarization - Uses Google's Gemini API to generate quick and efficient summaries.
+Local Storage Support – Summarized text is saved in local storage for easy access.
+Copy & Delete Summaries – Easily copy generated summaries or delete them when needed.
+
+#Tech
+Frontend: React, Tailwind CSS
+Backend: Google Gemini API (Gemini-1.5-Flash)
+Storage: Local Storage
+
+# React + Vite
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
