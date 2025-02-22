@@ -3,7 +3,7 @@ import "./App.css";
 
 function App() {
   const API_KEY = import.meta.env.VITE_GEMINI_KEY;
-  const MODEL_NAME = import.meta.env.MODEL;
+  const MODEL_NAME = "gemini-1.5-flash";
   const ENDPOINT = `https://generativelanguage.googleapis.com/v1/models/${MODEL_NAME}:generateContent`;
 
   const [value, setValue] = useState("");
