@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+body {
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: linear-gradient(to bottom right, #1e1e2e, #312e81);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.inner-container {
+  width: 90%;
+  max-width: 600px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 24px;
+  border-radius: 20px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  box-shadow: 0px 4px 20px rgba(255, 255, 255, 0.1);
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ff80ab;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #c4b5fd;
+}
+
+.highlight {
+  color: #ff80ab;
+  font-weight: bold;
+}
+
+.input-container {
+  margin-top: 20px;
+}
+
+.input-box {
+  width: 100%;
+  height: 150px;
+  border: none;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 10px;
+  resize: none;
+  outline: none;
+}
+
+.button-container {
+  margin-top: 15px;
+}
+
+.submit-button {
+  background: linear-gradient(to right, #ff4081, #7c3aed);
+  color: white;
+  font-size: 1rem;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submit-button:hover {
+  background: linear-gradient(to right, #e91e63, #5b21b6);
+  transform: scale(1.05);
+}
+
+.history-container {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.history-title {
+  font-size: 1.5rem;
+  color: #c4b5fd;
+  margin-bottom: 10px;
+}
+
+.history-list {
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.history-item {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.history-text {
+  color: white;
+  font-size: 1rem;
+}
+
+.history-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.copy-button, .delete-button {
+  background: none;
+  color: #ff80ab;
+  border: none;
+  cursor: pointer;
+}
+
+.copy-button:hover, .delete-button:hover {
+  text-decoration: underline;
+}
