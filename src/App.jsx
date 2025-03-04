@@ -28,7 +28,15 @@ function App() {
         "x-goog-api-key": API_KEY,
       },
       body: JSON.stringify({
-        contents: [{ parts: [{ text: `Summarize: ${value}` }] }],
+        contents: [
+          {
+            parts: [
+              {
+                text: `Summarize the following text in bullet point:\n\n${value}`,
+              },
+            ],
+          },
+        ],
       }),
     };
 
@@ -57,7 +65,6 @@ function App() {
       console.error("Fetch error:", error);
     }
   };
-
 
   const fetchLocalStorage = () => {
     const savedSummaries = localStorage.getItem("summary");
@@ -135,7 +142,7 @@ function App() {
         {pinnedSummary && (
           <div className="bg-indigo-900 bg-opacity-50 rounded-xl p-6 mb-4">
             <h3 className="text-indigo-300 text-xl text-center font-semibold">
-              📌 Pinned 
+              📌 Pinned
             </h3>
             <p className="text-indigo-100 text-lg mt-2">{pinnedSummary}</p>
           </div>
@@ -152,7 +159,16 @@ function App() {
                   key={index}
                   className="bg-indigo-900 bg-opacity-50 rounded-xl p-6 transition duration-300 ease-in-out hover:bg-opacity-70"
                 >
-                  <p className="text-indigo-100 text-lg mb-4">{d}</p>
+<ul className="list-disc list-inside text-indigo-100 text-lg mb-4 space-y-3 p-4 bg-indigo-800 bg-opacity-50 rounded-lg shadow-lg">
+  {d.split("\n")
+    .filter((point) => point.trim() !== "") // Remove empty lines
+    .map((point, idx) => (
+      <li key={idx} className="pl-4 border-l-4 border-pink-400 text-indigo-200">
+        {point.replace(/^\*\s*/, "")} {/* Remove existing bullet points */}
+      </li>
+    ))}
+</ul>
+
                   <div className="flex justify-end items-center space-x-4">
                     <button
                       className="text-pink-400 hover:text-pink-300 transition duration-300 ease-in-out text-sm font-medium"
