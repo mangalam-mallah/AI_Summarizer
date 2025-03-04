@@ -32,7 +32,7 @@ function App() {
           {
             parts: [
               {
-                text: `Summarize the following text in bullet point:\n\n${value}`,
+                text: `Summarize the following text in bullet point using simple language:\n\n${value}`,
               },
             ],
           },
